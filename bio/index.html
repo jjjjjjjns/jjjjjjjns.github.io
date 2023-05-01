@@ -50,8 +50,19 @@
 <body>
   <bgsound src="/html/yourfile.mdi" />
   <div class="video-background">
-    <video src="vids/andrewtate.mp4" loop muted></video>
+  <video src="vids/andrewtate.mp4" loop muted id="bg-video"></video>
+  <div class="video-overlay" onclick="enableAutoplay()">
+    <p>Click to enable video autoplay</p>
   </div>
+</div>
+
+<script>
+function enableAutoplay() {
+  var video = document.getElementById('bg-video');
+  video.muted = false;
+  video.play();
+  document.querySelector('.video-overlay').style.display = 'none';
+}
   
   <div class="profile-wrapper">
     <div class="profile-photo">
