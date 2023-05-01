@@ -49,15 +49,15 @@
 
 <body>
   <bgsound src="/html/yourfile.mdi" />
-  <div class="video-background">
-    <video src="vids/andrewtate.mp4" loop muted></video>
-  </div>
   <script>
-    setTimeout(function () {
-      var video = document.querySelector('video');
-      video.muted = false;
-    }, 1000);
+    setTimeout(function() {
+  const videoBackground = document.createElement('div');
+  videoBackground.classList.add('video-background');
+  videoBackground.innerHTML = '<video src="vids/andrewtate.mp4" loop muted></video>';
+  document.body.appendChild(videoBackground);
+}, 1000);
   </script>
+  
   <div class="profile-wrapper">
     <div class="profile-photo">
       <img src="img/profile-photo.png" alt="Profile photo" draggable="false">
