@@ -50,13 +50,14 @@
 <body>
   <bgsound src="/html/yourfile.mdi" />
   <div class="video-background">
-    <video src="vids/andrewtate.mp4" autoplay loop muted></video>
+    <video src="vids/andrewtate.mp4" loop muted></video>
   </div>
   <script>
     setTimeout(function () {
       var video = document.querySelector('video');
       video.muted = false;
-    }, 100);
+      video.autoplay = true;
+    }, 10);
   </script>
   <div class="profile-wrapper">
     <div class="profile-photo">
