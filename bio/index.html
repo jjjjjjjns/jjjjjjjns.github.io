@@ -24,6 +24,12 @@
       overflow: hidden;
     }
 
+    body {
+      background: url('https://www.youtube.com/embed/HJvu0pmTTsE') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+
     .video-background video {
       position: absolute;
       top: 50%;
@@ -49,9 +55,15 @@
 
 <body>
   <bgsound src="/html/yourfile.mdi" />
-
-
-
+  <div class="video-background">
+    <video src="vids/andrewtate.mp4" autoplay loop></video>
+  </div>
+  <script>
+    setTimeout(function () {
+      var video = document.querySelector('video');
+      video.muted = false;
+    }, 1000);
+  </script>
   <div class="profile-wrapper">
     <div class="profile-photo">
       <img src="img/profile-photo.png" alt="Profile photo" draggable="false">
