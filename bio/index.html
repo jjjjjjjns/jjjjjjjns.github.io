@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Profile Card</title>
+  <title>profile card.</title>
   <link rel="stylesheet" href="css/styles.css">
   <script src="https://kit.fontawesome.com/ae7c8365d8.js" crossorigin="anonymous"></script>
   <style>
@@ -35,7 +36,6 @@
     }
 
     .profile-wrapper {
-      display: none; /* hide profile wrapper initially */
       position: relative;
       z-index: 1;
       padding: 20px;
@@ -43,28 +43,16 @@
       text-align: center;
     }
 
-    /* Flashing "Press to Start" text animation */
-    .flash-text {
-      animation: flash 1s ease-in-out infinite;
-    }
-    
-    @keyframes flash {
-      0% {
-        opacity: 0;
-      }
-      50% {
-        opacity: 1;
-      }
-      100% {
-        opacity: 0;
-      }
-    }
+    /* Your existing CSS styles for the profile card */
   </style>
 </head>
+
 <body>
   <bgsound src="/html/yourfile.mdi" />
 
-  <div class="profile-wrapper" id="profile-wrapper">
+
+
+  <div class="profile-wrapper">
     <div class="profile-photo">
       <img src="img/profile-photo.png" alt="Profile photo" draggable="false">
       <p class="name">BlatantHax</p>
@@ -74,21 +62,12 @@
             aria-hidden="true"></i></a>
         <a class="social-link" href="https://dsc.gg/teamblatant" target="_blank"><i class="fab fa-discord"></i></a>
         <a class="social-link" href="https://dsc.gg/teamblatant" target="_blank"><i class="fas fa-comment"></i></a>
+
       </p>
+
     </div>
+
   </div>
-
-  <div class="flash-text" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-    <h1 style="color: #fff;">Press to Start</h1>
-  </div>
-
-  <script>
-    // Show the profile wrapper when the page is clicked
-    document.addEventListener('click', function() {
-      document.getElementById('profile-wrapper').style.display = 'block';
-      document.querySelector('.flash-text').style.display = 'none';
-    });
-  </script>
-
 </body>
+
 </html>
